@@ -1,29 +1,29 @@
 const mongoose = require('mongoose')
 
 const postSchema = mongoose.Schema({
-    title:{
-        type:String,
-        require:true,
-        min:5,
-        max:256
+    title: {
+        type: String,
+        required: true,
+        minlength: 5,
+        maxlength: 256
     },
-    user:{ //this should be a valid user but string for now
-        type:String,
-        require:true,
-        min:3,
-        max:256
+    user: { //this should be a valid user but string for now
+        type: String,
+        required: true,
+        minlength: 3,
+        maxlength: 256
     },
-    text:{
-        type:String,
-        require:true,
-        min:3,
-        max:2046
+    text: {
+        type: String,
+        required: true,
+        minlength: 3,
+        maxlength: 2046
     },
-    date:{
-        type:Date,
-        default:Date.now
+    date: {
+        type: Date,
+        default: Date.now
     },
-    replies:[]
+    replies: []
 })
 
-module.exports = mongoose.model('posts', postSchema) //posts is the database name on which to map PostSchema
+module.exports.Post = mongoose.model('Post', postSchema) //posts is the database name on which to map PostSchema
