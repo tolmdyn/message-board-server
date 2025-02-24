@@ -1,10 +1,8 @@
 # message-board-server
 
-A simple backend API for a message server. Using Node, Express and MongoDB and Supertest.
+A simple Node.js/Express.js backend API for a message server. Currently supports user registration, session management (with token) and posting of messages using a MongoDB instance. 
 
-Currently supports user registration, session management (with token) and posting of messages.
-
-Example frontend using Vue/Vite in [this](https:github.com/tolmdyn) repo.
+Example frontend using Vue/Vite in [this](https://github.com/tolmdyn/message-board-vue) repo.
 
 ## Usage
 npm run dev
